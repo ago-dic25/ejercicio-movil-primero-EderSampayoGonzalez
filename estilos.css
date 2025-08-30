@@ -1,1 +1,77 @@
+<!--  primero movil -->
 
+header{
+	list-style-type: none;
+}
+
+.lista{
+	font-size: 40px;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.tarjeta{
+	display: inline-block;
+	border-block: black;
+	width: 70vw;
+	height: 70vh;
+}
+
+.titulo{
+	font-size: 40px;
+}
+
+@media screen and (min-width: 700px){
+	.tarjeta{
+		display:inline;
+	}
+
+	.lista{
+		font-size: 30px;
+		padding: 0;
+	    margin: 0;
+	    display: flex;
+		flex-direction: row;
+		align-items: start;
+		justify-content: center;
+		column-gap: 10%;
+	}
+
+	.lista li{
+		background-color: lightgray;
+		font-family: Arial;
+	}
+
+	section div{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: fit-content;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.tarjeta{
+		display: inline;
+	}
+
+	.lista{
+		font-size: 30px;
+		padding: 0;
+	    margin: 0;
+	    display: flex;
+		flex-direction: row;
+		align-items: start;
+		justify-content: center;
+		column-gap: 10%;
+	}
+
+	.lista li{
+		background-color: lightgray;
+		font-family: Arial;
+	}
+
+
+}
