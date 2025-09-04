@@ -1,47 +1,78 @@
-<!--  primero movil -->
+/* primero movil */
 
 header{
 	list-style-type: none;
 }
 
+body{
+	margin: 3vw;
+	padding: auto;
+	background-color: rgb(245, 248, 215);
+}
+
 .lista{
-	font-size: 40px;
-	display: inline;
+	font-size: 1.5em;
+	display: block;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 
-.tarjeta{
-	display: inline-block;
-	border-block: black;
-	width: 70vw;
-	height: 70vh;
+.lista li{
+	background-color: skyblue;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 8px;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    max-width: 100vw;
 }
 
 .titulo{
 	font-size: 40px;
 }
 
+/* Estilo para Tabletas. dos tarjetas en una fila, una tarjeta en otra */
 @media screen and (min-width: 700px){
-	.tarjeta{
-		display:inline;
+	body {
+		background-color: rgb(215, 248, 217);
 	}
 
-	.lista{
+	.tarjeta{
+		display: inline-block;
+		padding: 16px;
+		width: 300px;
+	}
+
+	.lista{ 
 		font-size: 30px;
-		padding: 0;
-	    margin: 0;
+	    margin: 0 auto;
 	    display: flex;
 		flex-direction: row;
-		align-items: start;
+		align-items: flex-start;
 		justify-content: center;
-		column-gap: 10%;
+		box-sizing: border-box;
+		column-gap: 0;
 	}
 
 	.lista li{
-		background-color: lightgray;
+		background-color: skyblue;
 		font-family: Arial;
+		margin: 1px;
+		gap: 0px;
+	}
+
+	.lista > li > ul{
+		font-size: 50%;
+		text-align: left;
+		padding-left: 10%;
 	}
 
 	section div{
@@ -52,24 +83,40 @@ header{
 	}
 }
 
-@media screen and (min-width: 1024px){
-	.tarjeta{
-		display: inline;
+/* Estilo para laptops, las 3 tarjetas en la misma fila*/
+@media screen and (min-width: 1080px){
+	body {
+		background-color: rgb(215, 248, 246);
 	}
 
-	.lista{
+	section > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+    }
+	
+	.tarjeta{
+		display: inline-block;
+		padding: 3vw;
+		width: 25vw;
+	}
+
+
+	.lista{ 
 		font-size: 30px;
-		padding: 0;
-	    margin: 0;
+	    margin: 0 auto;
 	    display: flex;
 		flex-direction: row;
-		align-items: start;
+		align-items: flex-start;
 		justify-content: center;
-		column-gap: 10%;
+		box-sizing: border-box;
+		column-gap: 2rem;
 	}
 
 	.lista li{
-		background-color: lightgray;
+		background-color: skyblue;
 		font-family: Arial;
 	}
 
